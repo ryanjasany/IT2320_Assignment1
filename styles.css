@@ -1,0 +1,85 @@
+﻿body
+{
+}
+
+.paragraph{
+	
+	width: 700px;
+
+}
+
+.image{
+	border: 1px solid green;
+	display: inline-block;
+}
+
+.image:hover {
+	border: 3px solid green;
+}
+
+.aboutMe:hover{
+	border: 5px solid green;
+}
+
+.coffee1{
+	
+	background-image: url(coffee1.jpg);
+	background-size: 500px 280px;
+	transform: rotate(90deg);
+	width: 500px;
+	height: 280px;
+	margin: 140px auto;
+}
+.coffee2{
+	
+	background-image: url(coffee2.jpg);
+	background-size: 500px 280px;
+	transform: rotate(90deg);
+	width: 500px;
+	height: 280px;
+	margin: 140px auto;
+
+}
+
+.coffee3{
+	background-image: url(https://thumbnails-visually.netdna-ssl.com/an-illustrated-guide-to-coffee-drinks_50290a9e323e5_w1500.png);
+	background-size: 750px 750px;
+	width: 750px;
+	height: 750px;
+}
+
+.aboutMe{
+	border: 1px solid black;
+	padding: 10px 40px 20px;
+
+}
+.aboutMe h2{
+	text-align: center;
+}
+
+.table{
+	display:table;
+	border: 1px solid black;
+}
+
+.table .headings .leftHeading, .rightHeading{
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+.table .headings .leftHeading{
+	border-right: 1px solid black;
+}
+
+.table .row .goodDescription, .badDescription{
+	display: inline-block;
+	border-top: 1px solid black;
+	text-align: center;
+	width: 140px;
+}
+
+.table .row .goodDescription {
+	border-right: 1px solid black;
+
+}
