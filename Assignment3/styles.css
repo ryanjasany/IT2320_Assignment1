@@ -58,13 +58,7 @@ h3{
 	display: inline-block;
 }
 
-.image:hover {
-	border: 3px solid green;
-}
 
-.aboutMe:hover{
-	border: 5px solid green;
-}
 
 .coffee1{
 	
@@ -162,6 +156,16 @@ h3{
 
 }
 
+.red{
+	display: inline-block;
+	text-align: center;
+	width: 140px;
+	color: red;
+	font-style: italic;
+
+
+}
+
 .goodDescription{
 
 	display: inline-block;
@@ -180,5 +184,47 @@ h3{
 .header h1, h2 {
 	text-align: center;
 	margin: 0;
+
+}
+
+.coffeeQuickGuide .invertButton{
+	
+	background-color: black;
+	color: white;
+	width: 150PX;
+	border: 1px solid black;
+	margin: auto;
+	text-align: center;
+	margin-top: 45px;
+
+}
+
+.invertedPage{
+
+	color: white;
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.invertedHeader{
+	text-align: center;
+	margin: 0;
+	background-color: red;
+	color: white;
+	padding: 12px;
+}
+
+.invertedPage .revertButton{
+	background-color: white;
+	color: black;
+	width: 150PX;
+	border: 1px solid red;
+	margin: auto;
+	text-align: center;
+	margin-top: 45px;
+
 
 }
