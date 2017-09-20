@@ -38,16 +38,35 @@ function alertMe(div){
 
 	var team = createTeamAsObject();
 
-	var target = document.getElementsByClassName("container")[0];
+	var target = document.getElementsByClassName("teamButton")[0];
 
+	var table = document.getElementsByClassName("table")[0];
 
 	target.innerHTML = team.city + " " + team.name;
 	
-	for (var i=0; i<team.roster.length; i++)
-	{
+	var children = table.childNodes;
+
+	
+
+	for (var i=0, x = 1; i<team.roster.length; i++, x += 2)
+	{	
+
 		var player = team.roster[i];
-		alert("#" + player.number + " " + player.firstName + " " + player.lastName + " " + player.position + ".");
+
+		children[x].innerHTML = "#" + player.number + " " + player.firstName + " " + player.lastName + " " + player.position + ".";
 	}
 	
+
+}
+
+
+function displayJSON(div){
+
+var target = document.getElementsByClassName("json-container")[0];
+
+var team = createTeamAsObject();
+
+target.innerHTML = JSON.stringify(team);
+
 
 }
