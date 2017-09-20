@@ -70,3 +70,30 @@ target.innerHTML = JSON.stringify(team);
 
 
 }
+
+function DisplayPortrait(div){
+
+	var target = document.getElementsByClassName("portrait")[0];
+
+	//target.style.backgroundImage = "url(images/jack.jpg)";
+	//target.style.backgroundImage = "url(images/logo.jpg)";
+
+	if(div.className == "player player-1"){
+	
+	target.style.backgroundImage = "url(images/jack.jpg)";
+	
+	} else if(div.className == "player player-2"){
+	
+	target.style.backgroundImage = "url(images/david.jpg)";
+	
+	} else if(div.className == "player player-3"){
+	
+	target.style.backgroundImage = "url(images/sergei.jpg)";
+	
+	} else if(div.className == "player player-4"){
+	
+	target.style.backgroundImage = "url(images/cam.jpg)";
+	
+	}
+
+}

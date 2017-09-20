@@ -13,12 +13,12 @@
 
 	width: 900px;
 	box-shadow: 10px 10px 5px #888888;
-	border: 1px solid blue;
+	border: 1px solid #000052;
 }
 
 .header{
 
-	background-color: red;
+	background-color: #e20606;
 	color: white;
 	padding: 12px;
 	text-align: center;
@@ -29,11 +29,52 @@
 	background-color: white;
 	color: black;
 	width: 150PX;
-	border: 1px solid red;
+	border: 1px solid #000052;
 	margin: auto;
 	text-align: center;
 	margin-top: 45px;
 	display: inline-block;
 	margin-left: 200px;
 	margin-bottom: 75px;
+}
+
+.logo{
+
+	width: 75px;
+	height: 75px;
+	background-image: URL(images/logo.jpg);
+	background-size: 75px 75px;
+	display: inline-block;
+	float: left;
+
+}
+
+.json-container{
+
+	text-align: center;
+	border: 1px solid #000052;
+}
+
+.player{
+	
+	text-align: center;
+
+}
+
+.table{
+
+	margin: auto;
+	display:table;
+	border: 1px solid #000052;
+
+}
+
+.portrait{
+
+	width: 175px;
+	height: 150px;
+	border:  1px solid #000052;
+	margin: auto;
+	margin-top: 50px;
+
 }

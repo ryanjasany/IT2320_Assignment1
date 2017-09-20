@@ -12,12 +12,17 @@
 
 	<div class="content-page">
 		<div class="header">
-
+			<div class="logo"></div>
 			<h1>JavaScript Object Shoot-Out!</h1>
 
 		</div>
 
 
+		<div class="portrait" onclick="DisplayPortrait(this)" title="Click on a player to see their portrait!">
+		
+		</div>
+		
+		
 		<div class="teamButton" onclick="alertMe(this)">
 	
 		Click Here to see the team!
@@ -31,18 +36,20 @@
 		</div>
 
 		<div class="table">
-			<div class="player-1">
+			<div class="player player-1" onclick="DisplayPortrait(this)">
 			</div>
-			<div class="player-2">
+			<div class="player player-2" onclick="DisplayPortrait(this)">
 			</div>
-			<div class="player-3">
+			<div class="player player-3" onclick="DisplayPortrait(this)">
 			</div>
-			<div class="player-4">
+			<div class="player player-4" onclick="DisplayPortrait(this)">
 			</div>
 		</div>
-	
-		<div class="json-container">
-		</div>
+		
+
+			<div class="json-container">
+			</div>
+
 	</div>
 </body>
 </html>
