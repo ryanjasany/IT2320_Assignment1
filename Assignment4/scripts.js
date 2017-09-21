@@ -1,40 +1,39 @@
-// JavaScript source code
 function createTeamAsObject()
 {
 	var team = new Object();
 	team.city = "Columbus";
 	team.name = "Blue Jackets";
 
-	var johnson = new Object();
-	johnson.firstName = "Jack" 
-	johnson.lastName = "Johnson";
-	johnson.number = 7;
-	johnson.position = "Defenseman"
+	var johnson = new player("Jack", "Johnson", 7, "Defenseman");
 
-	var savard = new Object();
-	savard.firstName = "David";
-	savard.lastName = "Savard";
-	savard.number = 58;
-	savard.position = "Defenseman";
+	var savard = new player("David", "Savard", 58, "Defenseman");
 
-	var bobrovsky = new Object();
-	bobrovsky.firstName = "Sergei";
-	bobrovsky.lastName = "Bobrovsky";
-	bobrovsky.number = 72;
-	bobrovsky.position = "Goalie";
+	var bobrovsky = new player("Sergei", "Bobrovsky", 72, "Goalie");
+	
+	var atkinson = new player("Cam", "Atkinson", 13, "Right Wing");
 
-	var atkinson = new Object();
-	atkinson.firstName = "Cam";
-	atkinson.lastName = "Atkinson";
-	atkinson.number = 13;
-	atkinson.position = "Right Wing";
 
 	team.roster = new Array(johnson, savard, bobrovsky, atkinson);
+
+	player.prototype.country = null;
+	johnson.country = "USA";
+	savard.country = "CAN";
+	bobrovsky.country = "RUS";
+	atkinson.country = "USA";
 
 	return team;
 }
 
-function alertMe(div){
+function player(first, last, num, pos){
+	this.firstName = first;
+    this.lastName = last;
+    this.number = num;
+    this.position = pos;
+	this.name = function() {return this.firstName + " " + this.lastName;};
+
+}
+
+function teamCreator(div){
 
 	var team = createTeamAsObject();
 
@@ -52,8 +51,8 @@ function alertMe(div){
 	{	
 
 		var player = team.roster[i];
-
-		children[x].innerHTML = "#" + player.number + " " + player.firstName + " " + player.lastName + " " + player.position + ".";
+		
+		children[x].innerHTML = player.name();
 	}
 	
 
@@ -74,26 +73,36 @@ target.innerHTML = JSON.stringify(team);
 function DisplayPortrait(div){
 
 	var target = document.getElementsByClassName("portrait")[0];
+	var informationTarget = document.getElementsByClassName("information")[0];
 
-	//target.style.backgroundImage = "url(images/jack.jpg)";
-	//target.style.backgroundImage = "url(images/logo.jpg)";
+	var team = createTeamAsObject();
 
 	if(div.className == "player player-1"){
 	
 	target.style.backgroundImage = "url(images/jack.jpg)";
+		informationTarget.innerHTML = "Name: " + team.roster[0].firstName + " " + team.roster[0].lastName + "<br />" +
+	" Number: " + team.roster[0].number + "<br />" + " Position: " + team.roster[0].position + "<br />" + " Country: " + team.roster[0].country;
 	
 	} else if(div.className == "player player-2"){
 	
 	target.style.backgroundImage = "url(images/david.jpg)";
-	
+		informationTarget.innerHTML = "Name: " + team.roster[1].firstName + " " + team.roster[1].lastName + "<br />" +
+	" Number: " + team.roster[1].number + "<br />" + " Position: "  + team.roster[1].position + "<br />" + " Country: " + team.roster[1].country;
+
+
 	} else if(div.className == "player player-3"){
 	
+
 	target.style.backgroundImage = "url(images/sergei.jpg)";
-	
+		informationTarget.innerHTML = "Name: " + team.roster[2].firstName + " " + team.roster[2].lastName + "<br />" +
+	" Number: " + team.roster[2].number + "<br />" + " Position: "  + team.roster[2].position + "<br />" + " Country: " + team.roster[2].country;
+
 	} else if(div.className == "player player-4"){
 	
 	target.style.backgroundImage = "url(images/cam.jpg)";
-	
+		informationTarget.innerHTML = "Name: " + team.roster[3].firstName + " " + team.roster[3].lastName + "<br />" +
+	" Number: " + team.roster[3].number + "<br />" + " Position: " + team.roster[3].position + "<br />" + " Country: " + team.roster[3].country;
+
 	}
 
 }
