@@ -74,33 +74,48 @@ function DisplayPortrait(div){
 
 	var target = document.getElementsByClassName("portrait")[0];
 	var informationTarget = document.getElementsByClassName("information")[0];
+	var goalie = document.getElementsByClassName("goalie")[0];
+	var defenseman = document.getElementsByClassName("defenseman")[0];
+	var forward = document.getElementsByClassName("forward")[0];
+
 
 	var team = createTeamAsObject();
 
 	if(div.className == "player player-1"){
 	
 	target.style.backgroundImage = "url(images/jack.jpg)";
-		informationTarget.innerHTML = "Name: " + team.roster[0].firstName + " " + team.roster[0].lastName + "<br />" +
+	informationTarget.innerHTML = "Name: " + team.roster[0].firstName + " " + team.roster[0].lastName + "<br />" +
 	" Number: " + team.roster[0].number + "<br />" + " Position: " + team.roster[0].position + "<br />" + " Country: " + team.roster[0].country;
+	defenseman.style.border = "2px solid red";
+	forward.style.border = "";
+	goalie.style.border = "";
+
 	
 	} else if(div.className == "player player-2"){
 	
 	target.style.backgroundImage = "url(images/david.jpg)";
-		informationTarget.innerHTML = "Name: " + team.roster[1].firstName + " " + team.roster[1].lastName + "<br />" +
+	informationTarget.innerHTML = "Name: " + team.roster[1].firstName + " " + team.roster[1].lastName + "<br />" +
 	" Number: " + team.roster[1].number + "<br />" + " Position: "  + team.roster[1].position + "<br />" + " Country: " + team.roster[1].country;
-
+	defenseman.style.border = "2px solid red";
+	forward.style.border = "";
+	goalie.style.border = "";
 
 	} else if(div.className == "player player-3"){
 	
-
+	goalie.style.border = "2px solid red";
+	forward.style.border = "";
+	defenseman.style.border = "";
 	target.style.backgroundImage = "url(images/sergei.jpg)";
-		informationTarget.innerHTML = "Name: " + team.roster[2].firstName + " " + team.roster[2].lastName + "<br />" +
+	informationTarget.innerHTML = "Name: " + team.roster[2].firstName + " " + team.roster[2].lastName + "<br />" +
 	" Number: " + team.roster[2].number + "<br />" + " Position: "  + team.roster[2].position + "<br />" + " Country: " + team.roster[2].country;
 
 	} else if(div.className == "player player-4"){
 	
+	forward.style.border = "2px solid red";
+	defenseman.style.border = "";
+	goalie.style.border = "";
 	target.style.backgroundImage = "url(images/cam.jpg)";
-		informationTarget.innerHTML = "Name: " + team.roster[3].firstName + " " + team.roster[3].lastName + "<br />" +
+	informationTarget.innerHTML = "Name: " + team.roster[3].firstName + " " + team.roster[3].lastName + "<br />" +
 	" Number: " + team.roster[3].number + "<br />" + " Position: " + team.roster[3].position + "<br />" + " Country: " + team.roster[3].country;
 
 	}
