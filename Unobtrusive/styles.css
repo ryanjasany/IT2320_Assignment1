@@ -1,0 +1,230 @@
+﻿body
+{
+	background-color: lightgray;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+	
+}
+
+.coffeeQuickGuide h1, h2, h3{
+
+	font-family: Georgia, serif;
+
+}
+
+.coffeeQuickGuide{
+
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+
+	width: 900px;
+	box-shadow: 10px 10px 5px #888888;
+
+}
+
+.basic-section{
+	margin-left: 30px;
+	padding-bottom: 35px;
+
+}
+
+.coffeeQuickGuide header h1 {
+	
+		margin-left: 0;
+
+}
+
+h2{
+	padding-bottom: 10px;
+	margin-bottom: 2px;
+}
+
+h3{
+	padding-top: 5px;
+	margin-top: 2px;
+
+}
+
+.paragraph{
+	
+	width: 700px;
+	margin-bottom: 10px;
+
+}
+
+.image{
+	border: 1px solid green;
+	display: inline-block;
+}
+
+
+
+.coffee1{
+	
+	background-image: url(coffee1.jpg);
+	background-size: 500px 280px;
+	transform: rotate(90deg);
+	width: 375px;
+	height: 280px;
+	margin: 75px 45px;
+}
+.coffee2{
+	
+	background-image: url(coffee2.jpg);
+	background-size: 500px 280px;
+	transform: rotate(90deg);
+	width: 375px;
+	height: 280px;
+	margin: 75px auto;
+
+
+}
+
+.coffee3{
+	background-image: url(https://thumbnails-visually.netdna-ssl.com/an-illustrated-guide-to-coffee-drinks_50290a9e323e5_w1500.png);
+	background-size: 750px 750px;
+	width: 750px;
+	height: 750px;
+	margin-left: 65px;
+}
+
+.aboutMe{
+	border: 1px solid black;
+	padding: 10px 40px 20px;
+	margin: 10px auto;
+
+}
+.aboutMe h2{
+	text-align: center;
+}
+
+.table{
+	display:table;
+	border: 1px solid black;
+	margin: 0 auto 18px;
+
+}
+
+
+
+.table .headings .leftHeading, .rightHeading{
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+
+}
+
+.table .headings .leftHeading{
+
+	background-color: green;
+	color: white;
+}
+
+
+.table .headings .rightHeading{
+	background-color: red;
+	color: white;
+
+}
+
+.table .row .goodDescription, .badDescription{
+	display: inline-block;
+	text-align: center;
+	width: 140px;
+}
+
+.table .row .goodDescription {
+
+
+}
+
+.personal-space {
+
+	color: green;
+	width: 100%;
+
+}
+
+.green{
+
+	font-weight: bold;
+	color: green;
+	display: inline-block;
+	text-align: center;
+	width: 140px;
+
+}
+
+.red{
+	display: inline-block;
+	text-align: center;
+	width: 140px;
+	color: red;
+	font-style: italic;
+
+
+}
+
+.goodDescription{
+
+	display: inline-block;
+	text-align: center;
+	width: 140px;
+
+}
+
+.header{
+	background-color: green;
+	color: white;
+	padding: 12px;
+
+
+}
+.header h1, h2 {
+	text-align: center;
+	margin: 0;
+
+}
+
+.coffeeQuickGuide .invertButton{
+	
+	background-color: black;
+	color: white;
+	width: 150PX;
+	border: 1px solid black;
+	margin: auto;
+	text-align: center;
+	margin-top: 45px;
+
+}
+
+.invertedPage{
+
+	color: white;
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.invertedHeader{
+	text-align: center;
+	margin: 0;
+	background-color: red;
+	color: white;
+	padding: 12px;
+}
+
+.invertedPage .revertButton{
+	background-color: white;
+	color: black;
+	width: 150PX;
+	border: 1px solid red;
+	margin: auto;
+	text-align: center;
+	margin-top: 45px;
+
+
+}
