@@ -1,37 +1,62 @@
 // JavaScript source code
-
-function MouseOverListItem(div)
+window.onload = function Load()
 {
-	div.className = "green";
+    var goodItems = document.getElementsByClassName("goodDescription");
+	var badItems = document.getElementsByClassName("badDescription");
+
+    for (var i=0; i < goodItems.length; i++)
+    {
+        goodItems[i].addEventListener("mouseover", MouseOverListItem);
+		goodItems[i].addEventListener("mouseout", MouseOutListItem);
+		badItems[i].addEventListener("click", AlterText)
+    }
+
+	var inputField = document.getElementsByTagName("input")[0];
+
+	inputField.addEventListener("change", PersonalizePage);
+
+	var invertButton = document.getElementsByClassName("invertButton")[0];
+
+	invertButton.addEventListener("click", InvertColors);
 }
 
-function MouseOutListItem(div)
+
+
+
+
+
+function MouseOverListItem()
 {
-	div.className = "goodDescription";
+	this.className = "green";
+}
+
+function MouseOutListItem()
+{
+	this.className = "goodDescription";
 }
 
 function PersonalizePage(input){
 
 	var page = document.getElementsByClassName("personal-space")[0];
-	page.innerHTML = input.value;
+	page.innerHTML = this.value;
 
 }
 
-function AlterText(div){
+function AlterText(){
 
-	if(div.className == "badDescription")
+	if(this.className == "badDescription")
 	{
-		div.className = "red";
+		this.className = "red";
 	}
 	else
 	{
-		div.className = "badDescription";
+		this.className = "badDescription";
 	}
 }
 
 function InvertColors(div){
 
-	if(div.className == "invertButton")
+	if(this.className == "invertButton")
 	{
 		var page = document.getElementsByClassName("coffeeQuickGuide")[0];
 
