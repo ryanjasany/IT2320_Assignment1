@@ -21,16 +21,12 @@ window.onload = function Load()
 }
 
 
-
-
-
-
-function MouseOverListItem()
+function MouseOverListItem(div)
 {
 	this.className = "green";
 }
 
-function MouseOutListItem()
+function MouseOutListItem(div)
 {
 	this.className = "goodDescription";
 }
@@ -42,7 +38,7 @@ function PersonalizePage(input){
 
 }
 
-function AlterText(){
+function AlterText(div){
 
 	if(this.className == "badDescription")
 	{
@@ -84,9 +80,7 @@ function InvertColors(div){
 
 		revert.className = "invertButton";
 	
-	
-	
-	
+
 	}
 
 
