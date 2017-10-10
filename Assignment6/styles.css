@@ -1,0 +1,154 @@
+﻿body
+{
+	background-color: lightgray;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+.content-page{
+
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+
+	width: 900px;
+	box-shadow: 10px 10px 5px #888888;
+	border: 1px solid #000052;
+}
+
+.header{
+
+	background-color: #e20606;
+	color: white;
+	padding: 12px;
+	text-align: center;
+
+
+}
+
+h1{
+	width: 800px;
+}
+
+
+
+.teamButton{
+	background-color: red;
+	color: white;
+	width: 150PX;
+	border: 3px solid #000052;
+	margin: auto;
+	text-align: center;
+	margin-top: 45px;
+	display: inline-block;
+	margin-left: 200px;
+	margin-bottom: 45px;
+}
+
+.logo{
+
+	width: 75px;
+	height: 75px;
+	background-image: URL(images/logo.jpg);
+	background-size: 75px 75px;
+	display: inline-block;
+	float: left;
+
+}
+
+.json-container{
+
+	text-align: center;
+
+}
+
+.player{
+	
+	text-align: center;
+	padding: 7px;
+
+}
+
+.table{
+
+	margin: auto;
+	display:table;
+	margin-bottom: 15px;
+	font-weight: bold;
+
+}
+
+.portrait{
+
+	width: 170px;
+	height: 150px;
+	border:  3px solid #000052;
+	margin: auto;
+	margin-top: 25px;
+	background: #000052;
+	display: inline-block;
+	margin-left: 230px;
+
+
+
+}
+
+.information{
+vertical-align: middle;
+	margin-top: 15px;
+	font-weight: bold;
+	width: 170px;
+	height: 150px;
+	margin: auto;
+	display: inline-block;
+	margin-left: 10px;
+	padding-bottom: 80px;
+
+}
+
+.goalie{
+
+	width: 32px;
+	height: 32px;
+	background-image: URL(images/goalie.png);
+	background-size: 32px 32px;
+	display: inline-block;
+	margin-left: 395px;
+
+}
+
+.defenseman{
+
+	width: 32px;
+	height: 32px;
+	background-image: URL(images/defenseman.png);
+	background-size: 32px 32px;
+	display: inline-block;
+
+}
+
+.forward{
+
+	width: 32px;
+	height: 32px;
+	background-image: URL(images/forward.png);
+	background-size: 32px 32px;
+	display: inline-block;
+
+}
+
+.icons{
+margin-top: 10px;
+
+}
+
+.buttons{
+
+	background: #000052;
+
+}
+
+.display{
+	height: 170px;
+	margin-bottom: 60px;
+}
