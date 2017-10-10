@@ -1,123 +1,56 @@
-function createTeamAsObject()
-{
-	var team = new Object();
-	team.city = "Columbus";
-	team.name = "Blue Jackets";
-
-	var johnson = new player("Jack", "Johnson", 7, "Defenseman");
-
-	var savard = new player("David", "Savard", 58, "Defenseman");
-
-	var bobrovsky = new player("Sergei", "Bobrovsky", 72, "Goalie");
-	
-	var atkinson = new player("Cam", "Atkinson", 13, "Right Wing");
+var Main = {}
 
 
-	team.roster = new Array(johnson, savard, bobrovsky, atkinson);
-
-	player.prototype.country = null;
-	johnson.country = "USA";
-	savard.country = "CAN";
-	bobrovsky.country = "RUS";
-	atkinson.country = "USA";
-
-	return team;
-}
-
-function player(first, last, num, pos){
-	this.firstName = first;
-    this.lastName = last;
-    this.number = num;
-    this.position = pos;
-	this.name = function() {return this.firstName + " " + this.lastName;};
-
-}
-
-function teamCreator(div){
-
-	var team = createTeamAsObject();
-
-	var target = document.getElementsByClassName("teamButton")[0];
-
-	var table = document.getElementsByClassName("table")[0];
-
-	target.innerHTML = team.city + " " + team.name;
-	
-	var children = table.childNodes;
-
-	
-
-	for (var i=0, x = 1; i<team.roster.length; i++, x += 2)
-	{	
-
-		var player = team.roster[i];
-		
-		children[x].innerHTML = player.name();
-	}
-	
-
-}
+    Main.hockeyTeam = function(teamName, teamCity, teamDivision){
 
 
-function displayJSON(div){
+        this.name = teamName;
+        this.city = teamCity;
+        this.division = teamDivision;
+        this.roster = [];
 
-var target = document.getElementsByClassName("json-container")[0];
-
-var team = createTeamAsObject();
-
-target.innerHTML = JSON.stringify(team);
-
-
-}
-
-function DisplayPortrait(div){
-
-	var target = document.getElementsByClassName("portrait")[0];
-	var informationTarget = document.getElementsByClassName("information")[0];
-	var goalie = document.getElementsByClassName("goalie")[0];
-	var defenseman = document.getElementsByClassName("defenseman")[0];
-	var forward = document.getElementsByClassName("forward")[0];
+    };
 
 
-	var team = createTeamAsObject();
+    Main.hockeyTeam.prototype.listRoster = function () {
 
-	if(div.className == "player player-1"){
-	
-	target.style.backgroundImage = "url(images/jack.jpg)";
-	informationTarget.innerHTML = "Name: " + team.roster[0].firstName + " " + team.roster[0].lastName + "<br />" +
-	" Number: " + team.roster[0].number + "<br />" + " Position: " + team.roster[0].position + "<br />" + " Country: " + team.roster[0].country;
-	defenseman.style.border = "2px solid red";
-	forward.style.border = "";
-	goalie.style.border = "";
 
-	
-	} else if(div.className == "player player-2"){
-	
-	target.style.backgroundImage = "url(images/david.jpg)";
-	informationTarget.innerHTML = "Name: " + team.roster[1].firstName + " " + team.roster[1].lastName + "<br />" +
-	" Number: " + team.roster[1].number + "<br />" + " Position: "  + team.roster[1].position + "<br />" + " Country: " + team.roster[1].country;
-	defenseman.style.border = "2px solid red";
-	forward.style.border = "";
-	goalie.style.border = "";
+        var rosterListed = "";
 
-	} else if(div.className == "player player-3"){
-	
-	goalie.style.border = "2px solid red";
-	forward.style.border = "";
-	defenseman.style.border = "";
-	target.style.backgroundImage = "url(images/sergei.jpg)";
-	informationTarget.innerHTML = "Name: " + team.roster[2].firstName + " " + team.roster[2].lastName + "<br />" +
-	" Number: " + team.roster[2].number + "<br />" + " Position: "  + team.roster[2].position + "<br />" + " Country: " + team.roster[2].country;
+        for (var x = 0; x < this.roster.length; x++) {
 
-	} else if(div.className == "player player-4"){
-	
-	forward.style.border = "2px solid red";
-	defenseman.style.border = "";
-	goalie.style.border = "";
-	target.style.backgroundImage = "url(images/cam.jpg)";
-	informationTarget.innerHTML = "Name: " + team.roster[3].firstName + " " + team.roster[3].lastName + "<br />" +
-	" Number: " + team.roster[3].number + "<br />" + " Position: " + team.roster[3].position + "<br />" + " Country: " + team.roster[3].country;
+            rosterListed += "<li>"
+            rosterListed = rosterListed + this.roster[x].name + " ";
+            rosterListed += "</li>"
+        }
 
-	}
+        return rosterListed;
 
-}
+    }
+
+    Main.Player = function(playerName, playerPosition, playerCountry, playerNumber){
+
+        this.name = playerName;
+        this.position = playerPosition;
+        this.country = playerCountry;
+        this.number = playerNumber;
+    }
+
+    
+
+
+
+$(document).ready(function () {
+
+    Main.BlueJackets = new Main.hockeyTeam("Blue Jackets", "Columbus", "Metropolitan");
+
+    alert(Main.BlueJackets.name);
+
+    Main.BlueJackets.roster[0] = new Main.Player("Jack Johnson", "Defensemen", "USA", "7");
+    Main.BlueJackets.roster[1] = new Main.Player("Cam Atkinson", "Forward", "USA", "13");
+    Main.BlueJackets.roster[2] = new Main.Player("Sergei Bobrovsky", "Goalie", "RUS", "72");
+    Main.BlueJackets.roster[3] = new Main.Player("David Savard", "Defensemen", "CAN", "58");
+
+    $(".container").html(Main.BlueJackets.listRoster());
+
+});

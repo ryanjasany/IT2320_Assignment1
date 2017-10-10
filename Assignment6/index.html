@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Assignment 4</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script src="scripts.js"></script>
+
 
 </head>
 <body>
@@ -25,7 +25,7 @@
 
 		<div class="display">
 
-			<div class="portrait" onclick="DisplayPortrait(this)" title="Click on a player to see their portrait!">
+			<div class="portrait" title="Click on a player to see their portrait!">
 		
 			</div>
 
@@ -37,35 +37,32 @@
 		
 		<div class="buttons">
 
-			<div class="teamButton" onclick="teamCreator(this)">
+			<div class="teamButton" >
 	
 			Click Here to see the team!
 
 			</div>
 
-			<div class="jsonPrintOut teamButton" onclick="displayJSON(this)">
-	
-			Click Here to see the JSON!
-
-			</div>
 
 		</div>
 
 		<div class="table">
-			<div class="player player-1" onclick="DisplayPortrait(this)">
+			<div class="player player-1" >
 			</div>
-			<div class="player player-2" onclick="DisplayPortrait(this)">
+			<div class="player player-2" >
 			</div>
-			<div class="player player-3" onclick="DisplayPortrait(this)">
+			<div class="player player-3" >
 			</div>
-			<div class="player player-4" onclick="DisplayPortrait(this)">
+			<div class="player player-4" >
 			</div>
 		</div>
 		
 
-			<div class="json-container">
+			<div class="container">
 			</div>
 
 	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
