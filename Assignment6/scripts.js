@@ -1,6 +1,6 @@
 var Main = {}
 
-
+  //Create object for team
     Main.hockeyTeam = function(teamName, teamCity, teamDivision){
 
 
@@ -11,7 +11,7 @@ var Main = {}
 
     };
 
-
+ //Create a list of all player's names
     Main.hockeyTeam.prototype.listRoster = function () {
 
 
@@ -28,6 +28,7 @@ var Main = {}
 
     }
 
+  //Constructor for a player
     Main.Player = function(playerName, playerPosition, playerCountry, playerNumber){
 
         this.name = playerName;
@@ -36,6 +37,7 @@ var Main = {}
         this.number = playerNumber;
     }
 
+  //Display player info and portrait to page
     Main.hockeyTeam.prototype.Display = function(text){
 
         var targetPlayer;
@@ -43,17 +45,22 @@ var Main = {}
         for (var x = 0; x < this.roster.length; x++) {
 
             if (this.roster[x].name === text.trim()){
+
                 targetPlayer = this.roster[x];
                 var informationText = "";
+
                 for (variable in targetPlayer) {
 
                     informationText += "<li class='infoBullet'>"
-                    informationText += targetPlayer[variable];
+                    informationText += variable + ": " + targetPlayer[variable];
                     informationText += " </li>"
 
                 }
 
+                var imageLocation = "url(images/" + targetPlayer["number"] + ".jpg)";
+
                 $(".information").html(informationText);
+                $(".portrait").css("background-image", imageLocation);
 
 
             }
@@ -66,16 +73,19 @@ var Main = {}
 
 $(document).ready(function () {
 
+    //Create the team object
     Main.BlueJackets = new Main.hockeyTeam("Blue Jackets", "Columbus", "Metropolitan");
 
+    //Add players to the team object
     Main.BlueJackets.roster[0] = new Main.Player("Jack Johnson", "Defensemen", "USA", "7");
     Main.BlueJackets.roster[1] = new Main.Player("Cam Atkinson", "Forward", "USA", "13");
     Main.BlueJackets.roster[2] = new Main.Player("Sergei Bobrovsky", "Goalie", "RUS", "72");
     Main.BlueJackets.roster[3] = new Main.Player("David Savard", "Defensemen", "CAN", "58");
 
+    //Display players' names as a list
     $(".container").html(Main.BlueJackets.listRoster());
 
-
+    //Attach event listeners to players
     $(".player").click(function () {
 
         Main.BlueJackets.Display($(this).text());

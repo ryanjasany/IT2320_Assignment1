@@ -42,13 +42,6 @@ h1{
 
 }
 
-.player{
-	
-	text-align: center;
-	padding: 7px;
-
-}
-
 .portrait{
 
 	width: 170px;
@@ -63,15 +56,16 @@ h1{
 }
 
 .information{
-vertical-align: middle;
+    vertical-align: middle;
 	margin-top: 15px;
 	font-weight: bold;
-	width: 170px;
+	width: 180px;
 	height: 150px;
 	margin: auto;
 	display: inline-block;
 	margin-left: 10px;
 	padding-bottom: 80px;
+    list-style: none;
 
 }
 
@@ -114,4 +108,17 @@ margin-top: 10px;
 .display{
 	height: 170px;
 	margin-bottom: 60px;
+}
+
+.player {
+    background-color: red;
+    color: white;
+    width: 150PX;
+    border: 3px solid #000052;
+    margin: auto;
+    text-align: center;
+    margin-top: 45px;
+    display: inline-block;
+    margin-left: 55px;
+    margin-bottom: 45px;
 }
