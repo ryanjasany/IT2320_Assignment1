@@ -19,7 +19,7 @@ var Main = {}
 
         for (var x = 0; x < this.roster.length; x++) {
 
-            rosterListed += "<li>"
+            rosterListed += "<li class='player'>"
             rosterListed = rosterListed + this.roster[x].name + " ";
             rosterListed += "</li>"
         }
@@ -36,6 +36,30 @@ var Main = {}
         this.number = playerNumber;
     }
 
+    Main.hockeyTeam.prototype.Display = function(text){
+
+        var targetPlayer;
+
+        for (var x = 0; x < this.roster.length; x++) {
+
+            if (this.roster[x].name === text.trim()){
+                targetPlayer = this.roster[x];
+                var informationText = "";
+                for (variable in targetPlayer) {
+
+                    informationText += "<li class='infoBullet'>"
+                    informationText += targetPlayer[variable];
+                    informationText += " </li>"
+
+                }
+
+                $(".information").html(informationText);
+
+
+            }
+        }
+
+    }
     
 
 
@@ -44,8 +68,6 @@ $(document).ready(function () {
 
     Main.BlueJackets = new Main.hockeyTeam("Blue Jackets", "Columbus", "Metropolitan");
 
-    alert(Main.BlueJackets.name);
-
     Main.BlueJackets.roster[0] = new Main.Player("Jack Johnson", "Defensemen", "USA", "7");
     Main.BlueJackets.roster[1] = new Main.Player("Cam Atkinson", "Forward", "USA", "13");
     Main.BlueJackets.roster[2] = new Main.Player("Sergei Bobrovsky", "Goalie", "RUS", "72");
@@ -53,4 +75,10 @@ $(document).ready(function () {
 
     $(".container").html(Main.BlueJackets.listRoster());
 
+
+    $(".player").click(function () {
+
+        Main.BlueJackets.Display($(this).text());
+
+    });
 });

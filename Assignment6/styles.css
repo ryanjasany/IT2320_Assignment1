@@ -31,20 +31,6 @@ h1{
 }
 
 
-
-.teamButton{
-	background-color: red;
-	color: white;
-	width: 150PX;
-	border: 3px solid #000052;
-	margin: auto;
-	text-align: center;
-	margin-top: 45px;
-	display: inline-block;
-	margin-left: 200px;
-	margin-bottom: 45px;
-}
-
 .logo{
 
 	width: 75px;
@@ -56,25 +42,10 @@ h1{
 
 }
 
-.json-container{
-
-	text-align: center;
-
-}
-
 .player{
 	
 	text-align: center;
 	padding: 7px;
-
-}
-
-.table{
-
-	margin: auto;
-	display:table;
-	margin-bottom: 15px;
-	font-weight: bold;
 
 }
 
@@ -88,8 +59,6 @@ h1{
 	background: #000052;
 	display: inline-block;
 	margin-left: 230px;
-
-
 
 }
 
@@ -139,12 +108,6 @@ vertical-align: middle;
 
 .icons{
 margin-top: 10px;
-
-}
-
-.buttons{
-
-	background: #000052;
 
 }
 
