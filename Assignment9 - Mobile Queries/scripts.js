@@ -74,9 +74,6 @@ var Main = {}
 
 
 $(document).ready(function () {
-
-
-	$(".header").append(Main.calendar.Year);
     
 	Main.produceButtons();
 

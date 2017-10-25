@@ -28,7 +28,6 @@
 
 display:inline-block;
 border: 3px solid #960cce;
-width: 13%;
 padding: 5px;
 margin: 21px;
 text-align: center;
@@ -56,6 +55,10 @@ text-align: center;
     .content-page {
         width: 65%;
     }
+    .month{
+        width: 110px;
+
+    }
 }
 
 
@@ -77,6 +80,20 @@ text-align: center;
     }
 }
 
+@media only screen and (max-width:570px) and (orientation: landscape) { /* smartphones, Android phones, landscape iPhone */
+
+    body {
+        font-size: 20px;
+    }
+
+    .header > h1 {
+    
+       font-size: 20px;
+    
+    }
+}
+
+
 @media only screen and (max-width:480px) { /* smartphones, Android phones, landscape iPhone */
 
     .month {
@@ -88,6 +105,8 @@ text-align: center;
     }
 
 }
+
+
 
 @media only screen and (max-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 
@@ -101,6 +120,9 @@ text-align: center;
         border: 1px solid purple;
     
 }
+
+
+
 
 }
 
