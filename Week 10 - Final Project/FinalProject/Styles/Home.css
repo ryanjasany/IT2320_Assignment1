@@ -1,4 +1,11 @@
-﻿.logIn {
+﻿body {
+    width: 520px;
+    font-family: Calibri;
+    font-size: 12px;
+    background-color: rgba(0, 178, 166, 0.75);
+}
+
+.logIn {
     display: inline-block;
     width: 48%;
 }
@@ -6,26 +13,74 @@
 .logInElements {
     border-bottom: 1px solid blue;
     margin-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .contentLogIn {
     width: 48%;
     display: inline-block;
+    text-align: center;
 }
 
 .contentCreate {
     display: inline-block;
-    width: 48%;
+    width: 35%;
+    float: left;
+padding: 40px 15px 0px 10px;
 }
 
 .accountCreation {
     display: inline-block;
-    width: 48%;
+    width: 56%;
 }
 
 .container {
-    border: 1px solid gray;
+    border: 2px solid gray;
     width: 90%;
     margin: 10px auto;
     padding: 15px;
+    background-color: lightgray;
+    box-shadow: 5px 5px black;
+    border-radius: 10px;
 }
+
+.error {
+    display: none;
+    color: red;
+    width: 100% !important;
+}
+
+.button {
+    background-color: lightblue;
+    display: block;
+    border-radius: 10px;
+}
+
+.header {
+    
+    font-family: "Cambria";
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.legal {
+    
+    font-family: Calibri;
+    font-size: 12px;
+    font-style: italic;
+
+}
+
+.create {
+
+    width: 50%;
+
+}
+
+.label {
+    width: 48%;
+    display: inline-block;
+    padding: 12px 0;
+}
+

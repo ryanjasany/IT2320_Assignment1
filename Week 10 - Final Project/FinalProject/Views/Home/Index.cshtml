@@ -14,9 +14,9 @@
         
         <div class="home">
 
-            <div>Welcome to Cuyahoga Community College Student Services Online</div>
+            <div class="header">Welcome to Cuyahoga Community College Student Services Online</div>
 
-            <div>Cuyahoga Community College recognizes students' rights to access personal and academic recods in accordance with the Family and Educational Rights and Privacy Act of 1974 (FERPA) as amended by Public Law 93-568</div>
+            <div class="legal">Cuyahoga Community College recognizes students' rights to access personal and academic recods in accordance with the Family and Educational Rights and Privacy Act of 1974 (FERPA) as amended by Public Law 93-568</div>
 
             <div class="container">
                
@@ -27,7 +27,8 @@
                     <div class="logIn">
                         <div>Username <input class="login username" type="text" value="" /></div>
                         <div>Password <input class="login password" type="text" value="" /></div>
-                        <button>Log In</button>
+                        <div class="error logIn">Please enter valid log in credentials.</div>
+                        <button type="button" class="logInButton button">Log In</button>
                     </div>
 
                 </div>
@@ -37,11 +38,17 @@
                     <div class="contentCreate">New users, please create a new account by providing us with some basic information.</div>
 
                     <div class="accountCreation">
-                        <div>Username <input class="create username" type="text" value="" /></div>
-                        <div>Password <input class="create password" type="text" value="" /></div>
-                        <div>E-Mail Address <input class="create email" type="text" value="" /></div>
-                        <div>Repeat Email Address <input class="create repeatEmail" type="text" value="" /></div>
-                        <button type="button" class="createButton">Create Account</button>
+                        <div class="label">Username </div>
+                        <input class="create username" type="text" value="" />
+                        <div class="error create">The username you entered is already taken.</div>
+                        <div class="label">Password </div>
+                        <input class="create password" type="text" value="" />
+                        <div class="error create">Password must contain atleast 6 characters.</div>
+                        <div class="label">E-Mail Address </div>
+                        <input class="create email" type="text" value="" />
+                        <div class="label">Repeat E-mail Address </div>
+                        <input class="create repeatEmail" type="text" value=""/>
+                        <button type="button" class="createButton button">Create Account</button>
                     </div>
 
                 </div>
