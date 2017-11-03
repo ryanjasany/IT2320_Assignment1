@@ -58,7 +58,45 @@ Home.logIn = function () {
             }
             else if (response.Message === "Success") {
                 $(".container").css("border", "1px solid green");
+                Home.getInformation();
+                $(".secondView").show();
+                $(".firstView").hide();
+
             }
+        }
+
+    });
+
+}
+
+Home.getInformation = function () {
+
+    var username;
+
+    var username = $(".logIn.username").val();
+
+
+    $.ajax({
+        url: "Home/GetAccountInformation",
+        data: {
+            "Username": username,
+        },
+        success: function (stringResponse) {
+            response = JSON.parse(stringResponse);
+            if (response.Message === "Error") {
+                $(".error.logIn").css("display", "block");
+            }
+            else if (response.Message === "Success") {
+                $(".container").css("border", "1px solid green");
+
+                response2 = JSON.parse(response.Payload);
+
+                $(".displayName").text(response2.account.username);
+                $(".account.email").val(response2.account.emailadd);
+
+            }
+
+
         }
 
     });
@@ -78,18 +116,20 @@ $(document).ready(function () {
     });
 
 
-    $(".createButton, .logInButton").mouseenter(function () {
+    $(".createButton, .logInButton, .update").mouseenter(function () {
 
         $(this).css("background-color", "lightyellow");
 
 
     });
 
-    $(".createButton, .logInButton").mouseleave(function () {
+    $(".createButton, .logInButton, .update").mouseleave(function () {
 
 
         $(this).css("background-color", "lightblue");
 
     });
+
+
 
 });
