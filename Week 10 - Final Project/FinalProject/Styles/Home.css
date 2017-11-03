@@ -156,3 +156,32 @@ div.accountName:first-child .name {
 
 }
 
+.elements {
+    border-top: 1px solid blue;
+    width: 90%;
+    padding: 10px;
+    margin: 15px auto;
+}
+
+.element{
+    margin: auto;
+    width: 55%;
+}
+
+.button.addElement {
+    margin: 0;
+    padding: 0;
+
+}
+
+input.account.element {
+    width: 60%;
+
+}
+
+div.element > .label {
+
+    width: 40%;
+
+}
+

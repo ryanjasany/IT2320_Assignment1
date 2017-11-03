@@ -116,14 +116,14 @@ $(document).ready(function () {
     });
 
 
-    $(".createButton, .logInButton, .update").mouseenter(function () {
+    $(".createButton, .logInButton, .update, .addElement").mouseenter(function () {
 
         $(this).css("background-color", "lightyellow");
 
 
     });
 
-    $(".createButton, .logInButton, .update").mouseleave(function () {
+    $(".createButton, .logInButton, .update, .addElement").mouseleave(function () {
 
 
         $(this).css("background-color", "lightblue");
