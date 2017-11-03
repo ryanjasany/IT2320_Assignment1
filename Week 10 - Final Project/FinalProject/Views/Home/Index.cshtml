@@ -22,11 +22,11 @@
                
                 <div class="logInElements">
 
-                    <div class="contentLogIn">Already have an account? Returning users may log in by entering their site username and password.</div>
+                    <div class="content contentLogIn">Already have an account? Returning users may log in by entering their site username and password.</div>
 
                     <div class="logIn">
-                        <div>Username <input class="login username" type="text" value="" /></div>
-                        <div>Password <input class="login password" type="text" value="" /></div>
+                        <div class="label">Username</div><input class="login username" type="text" value="" />
+                        <div class="label">Password</div><input class="login password" type="text" value="" />
                         <div class="error logIn">Please enter valid log in credentials.</div>
                         <button type="button" class="logInButton button">Log In</button>
                     </div>
@@ -35,7 +35,7 @@
 
                 <div class="createElements">
 
-                    <div class="contentCreate">New users, please create a new account by providing us with some basic information.</div>
+                    <div class="content contentCreate">New users, please create a new account by providing us with some basic information.</div>
 
                     <div class="accountCreation">
                         <div class="label">Username </div>
@@ -62,15 +62,18 @@
 
                 <div class="information">
                     <div class="accountName">
-                    <div>AccountName</div>
-                        <div>EMailAddress</div>
-                        <div>CurrentGPA</div>
+                    <div class="label name">AccountName</div>
+                        <div class="label">EMailAddress</div>
+                        <div class="label">CurrentGPA</div>
                     
                       </div>
                     <div class="values">
+
                         <div class="value displayName">username</div>
-                        <input class="account email" type="text" value="" /><button type="button" class="button update">Update</button>
-                        <input class="account gpa" type="text" value="" /><button type="button" class="button update">Update</button>
+
+                        <div class="value"><input class="account email" type="text" value=""/><button type="button" class="button update">Update</button></div>
+                        
+                        <div class="value"><input class="account gpa" type="text" value=""/><button type="button" class="button update">Update</button></div>
                     </div>
                 </div>
                 <div class="elements">

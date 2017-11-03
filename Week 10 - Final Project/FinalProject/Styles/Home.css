@@ -7,7 +7,7 @@
 
 .logIn {
     display: inline-block;
-    width: 48%;
+    width: 52%;
 }
 
 .logInElements {
@@ -17,21 +17,22 @@
 }
 
 .contentLogIn {
-    width: 48%;
+    width: 39%;
     display: inline-block;
-    text-align: center;
+    vertical-align: top;
+    padding-top: 20px;
 }
 
 .contentCreate {
     display: inline-block;
-    width: 35%;
+    width: 36%;
     float: left;
-padding: 40px 15px 0px 10px;
+    padding: 40px 15px 0px 0;
 }
 
 .accountCreation {
     display: inline-block;
-    width: 56%;
+    width: 59%;
 }
 
 .container {
@@ -54,6 +55,9 @@ padding: 40px 15px 0px 10px;
     background-color: lightblue;
     display: inline-block;
     border-radius: 10px;
+    float: right;
+    width: 110px;
+    margin-top: 10px;
 }
 
 .header {
@@ -79,39 +83,76 @@ padding: 40px 15px 0px 10px;
 }
 
 .label {
-    width: 48%;
+    width: 42%;
     display: inline-block;
     padding: 12px 0;
 }
 
 .accountName {
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
     display: inline-block;
     width: 23%;
-    padding: 12px 10px;
     vertical-align: top;
 }
 
 .values {
-    border: 1px solid black;
     display: inline-block;
     width: 68%;
-    padding: 5px 0;
+    border-left: 1px solid black;
+    padding-left: 15px;
 }
 
 .information {
     display: table;
-    border-bottom: 1px solid blue;
-    padding: 10px;
+    border: 1px solid black;
     width: 75%;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .secondView{
 
     display:none;
+
+}
+
+.content {
+    font-size: 14px;
+
+}
+
+div.logIn > .label {
+
+    padding-right: 14px;
+
+
+}
+
+.createButton {
+    
+    margin-right: 25px;
+
+}
+
+button.button.update{
+
+    width: 25%;
+    float: none;
+    margin: 0;
+
+}
+
+div.accountName > .label {
+    
+    display: block;
+
+}
+
+div.accountName:first-child .name {
+    font-weight: bold;
+}
+
+.value {
+    padding: 12px 0;
 
 }
 
