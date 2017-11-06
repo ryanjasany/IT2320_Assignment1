@@ -95,6 +95,7 @@ Home.addOrUpdateElement = function () {
             else if (response.Message === "Success") {
                 $(".container").css("border", "1px solid green");
                 alert("success");
+                $(".additionalInfo").append("<li>Name: " + elementName + "        Value: " + elementValue + "</li>");
 
             }
         }
@@ -127,6 +128,13 @@ Home.getInformation = function () {
 
                 $(".displayName").text(response2.account.username);
                 $(".account.email").val(response2.account.emailadd);
+
+                for (x in response2.account)
+                {
+                    if (!(x === "username" || x === "password" || x === "emailadd")) {
+                        $(".additionalInfo").append("<li>Name: " + x + "        Value: "+  response2.account[x] + "</li>");
+                    }
+                    }
 
             }
 

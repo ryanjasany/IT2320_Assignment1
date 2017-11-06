@@ -185,3 +185,9 @@ div.element > .label {
 
 }
 
+.additionalInfo {
+    
+    display: block;
+    padding:  10px 50px;
+
+}
