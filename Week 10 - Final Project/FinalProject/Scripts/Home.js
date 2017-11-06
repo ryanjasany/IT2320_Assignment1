@@ -69,6 +69,40 @@ Home.logIn = function () {
 
 }
 
+Home.addOrUpdateElement = function () {
+
+    var username;
+    var elementName;
+    var elementValue;
+
+    username = $(".displayName").text();
+    elementName = $(".element.elementName").val();
+    elementValue = $(".element.elementValue").val();
+
+
+    $.ajax({
+        url: "Home/AddOrUpdateElement",
+        data: {
+            "Username": username,
+            "elementName": elementName,
+            "elementValue": elementValue
+        },
+        success: function (stringResponse) {
+            response = JSON.parse(stringResponse);
+            if (response.Message === "Error") {
+                alert("error");
+            }
+            else if (response.Message === "Success") {
+                $(".container").css("border", "1px solid green");
+                alert("success");
+
+            }
+        }
+
+    });
+
+}
+
 Home.getInformation = function () {
 
     var username;
@@ -115,6 +149,9 @@ $(document).ready(function () {
         Home.logIn()
     });
 
+    $("button.addElement").click(function () {
+        Home.addOrUpdateElement()
+    });
 
     $(".createButton, .logInButton, .update, .addElement").mouseenter(function () {
 
