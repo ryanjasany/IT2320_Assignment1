@@ -5,6 +5,7 @@
     <head>
         <link href="~/Styles/Home.css" rel="stylesheet" />
         <title>Final Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -25,6 +26,7 @@
                     <div class="content contentLogIn">Already have an account? Returning users may log in by entering their site username and password.</div>
 
                     <div class="logIn">
+                        <div class="mobileTitle">Log In</div>
                         <div class="label">Username</div><input class="login username" type="text" value="" />
                         <div class="label">Password</div><input class="login password" type="text" value="" />
                         <div class="error logIn">Please enter valid log in credentials.</div>
@@ -38,6 +40,7 @@
                     <div class="content contentCreate">New users, please create a new account by providing us with some basic information.</div>
 
                     <div class="accountCreation">
+                        <div class="mobileTitle">Create New Account</div>
                         <div class="label">Username </div>
                         <input class="create username" type="text" value="" />
                         <div class="error create">The username you entered is already taken.</div>
@@ -68,11 +71,11 @@
                     
                       </div>
                     <div class="values">
-
+                        <div class="mobileTitle">AccountName</div>
                         <div class="value displayName">username</div>
-
+                        <div class="mobileTitle">EMailAddress</div>
                         <div class="value"><input class="account email" type="text" value=""/><button type="button" class="button update email">Update</button></div>
-                        
+                        <div class="mobileTitle">CurrentGPA</div>
                         <div class="value"><input class="account gpa" type="text" value=""/><button type="button" class="button update GPA">Update</button></div>
                     </div>
                 </div>
@@ -85,8 +88,8 @@
 
                 <div class="elements">
 
-                    <div class="element"><div class="label">ElementName</div><input class="account element elementName" type="text" value="" /></div>
-                    <div class="element"><div class="label">ElementValue</div><input class="account element elementValue" type="text" value="" /></div>
+                    <div class="element"><div class="label add">ElementName</div><input class="account element elementName" type="text" value="" /></div>
+                    <div class="element"><div class="label add">ElementValue</div><input class="account element elementValue" type="text" value="" /></div>
                     <div class="element"><button type="button" class="button addElement">Add</button></div>
 
                 </div>

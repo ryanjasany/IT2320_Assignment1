@@ -191,3 +191,91 @@ div.element > .label {
     padding:  10px 50px;
 
 }
+
+.mobileTitle {
+    display: none;
+
+}
+
+
+
+@media only screen and (max-width:480px) { /* smartphones, Android phones, landscape iPhone */
+
+    .content {
+        display: none;
+    }
+    body {
+        width: 90%;
+        margin: auto;
+        font-size: 14px;
+    }
+    .logIn, .accountCreation {
+        width: 90%;
+    }
+        .login.username, .login.password, .create.username, input.create {
+            width: 60%;
+        }
+        .label{
+
+            width: 25%;
+        }
+    button.logInButton.button, button.createButton.button, button.button.addElement, button.button.update {
+        width: 100%;
+        float: none;
+        margin: 12px;
+        display: block;
+        padding: 10px;
+
+    }
+    .header, .legal {
+        text-align: center;
+    }
+    .mobileTitle {
+        display:block;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+   .label.add {
+        display: block;
+        width: 100%;
+        margin-left: 25px;
+    }
+    input.account.element {
+        display: block;
+        width: 80%;
+    }
+    .element {
+        width: 100%;
+    }
+    .values{
+        
+        display:block;
+        border: none;
+    
+    }
+    .accountName{
+        display: none;
+
+    }
+
+    .information {
+        border: none;
+    }
+}
+
+
+@media only screen and (max-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+    body {
+
+        width: 300px;
+    }
+    .container {
+        box-shadow: none;
+    }
+
+
+}
+
+
