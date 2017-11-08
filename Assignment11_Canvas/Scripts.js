@@ -13,15 +13,13 @@ Main.followMe = false;
 Main.initX = 0;
 Main.initY = 300;
 Main.offset = 120;
-Main.focusNumber = 0;
 Main.temp = 0;
 
-Main.Box = function (xC, yC, c, d, index) {
+Main.Box = function (xC, yC, c, d, color) {
 
     this.x = xC;
     this.y = yC;
     this.switch = false;
-    this.number = index;
 
     this.draw = function () {
 
@@ -43,7 +41,7 @@ Main.Box = function (xC, yC, c, d, index) {
         }
         else {
             //If not under mouse
-            Main.Context.fillStyle = "#FFFF00";
+            Main.Context.fillStyle = color;
             this.switch = false;
             if (Main.followMe == true) {
 
@@ -69,7 +67,7 @@ Main.Box = function (xC, yC, c, d, index) {
 }
 
 
-Main.Boxes = [new Main.Box(Main.initX, Main.initY, 75, 80, 0), new Main.Box(Main.initX + (Main.offset), 300, 75, 80, 1), new Main.Box(Main.initX + (Main.offset * 2), 300, 75, 80, 2), new Main.Box(Main.initX + (Main.offset * 3), 300, 75, 80, 3), new Main.Box(Main.initX + (Main.offset) * 4, 300, 75, 80, 4)]
+Main.Boxes = [new Main.Box(Main.initX, Main.initY, 75, 80, "#bcb916"), new Main.Box(Main.initX + (Main.offset), 300, 75, 80, "#ac35ba"), new Main.Box(Main.initX + (Main.offset * 2), 300, 75, 80, "#39ba34"), new Main.Box(Main.initX + (Main.offset * 3), 300, 75, 80, "#545a63"), new Main.Box(Main.initX + (Main.offset) * 4, 300, 75, 80, "#4286f4")]
 
 
 Main.MouseUp = function (mouseEvent) {
