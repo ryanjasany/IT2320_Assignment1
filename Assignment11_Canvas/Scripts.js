@@ -5,46 +5,57 @@ Main.Context = Main.Canvas.getContext('2d');
 Main.MX = 0;
 Main.MY = 0;
 Main.MousePressed = false;
+Main.focusWidth = 90;
+Main.focusHeight = 90;
+Main.speed = 2;
+Main.pause = false;
 
 Main.Box = function (xC, yC, c, d) {
 
     this.x = xC;
     this.y = yC;
-
-    this.IsSelected = function () {
-        if (!Main.MousePressed) return false;
-        var withinXAxisCoordinates = Main.MX > this.X && Main.MX < (this.X + this.Width);
-        var withinYAxisCoordinates = Main.MY > this.Y && Main.MY < (this.Y + this.Height);
-        return withinXAxisCoordinates && withinYAxisCoordinates;
-    }
+    this.switch = false;
 
     this.draw = function () {
 
-        Main.Context.fillStyle = "#FF0000";
-        Main.Context.fillRect(this.x, this.y, c, d);
+        if (Main.MX < this.x + 40 && Main.MX > this.x - 40 && Main.MY > 300 && Main.MY < 400) {
+            Main.Context.fillStyle = "#FF0000";
+            Main.Context.fillRect(this.x, this.y, Main.focusHeight, Main.focusWidth);
+            Main.speed = 0;
+            //Main.pause = true;
+        }
+        else {
+            Main.Context.fillStyle = "#FFFF00";
+            Main.Context.fillRect(this.x, this.y, c, d);
+            Main.speed = 2;
+            //this.pause = false;
+        }
+        
 
-        this.x += 2;
+        if (Main.pause == false) {
+            this.x += Main.speed;
+        }
 
-        if (this.x == 600)
-        {
+        if (this.x == 600) {
             this.x = 0;
-
         }
 
     }
-
-
-
 }
 
 Main.MouseUp = function (mouseEvent) {
-    Main.MousePressed = false;
+
+    Main.pause = true;
 }
 
 Main.MouseDown = function (mouseEvent) {
-    Main.MousePressed = true;
+    Main.pause = false;
 }
 
+Main.MouseOver = function () {
+
+
+}
 
 Main.box1 = new Main.Box(0, 300, 75, 80);
 Main.box2 = new Main.Box(120, 300, 75, 80);
@@ -110,6 +121,9 @@ window.requestAnimFrame = (function(callback)
 $(document).ready(function()
 {
     Main.Animate();
-    Main.Canvas.addEventListener('mouseup', function (mouseEvent) { Main.MouseUp(mouseEvent); });
-    Main.Canvas.addEventListener('mousedown', function (mouseEvent) { Main.MouseDown(mouseEvent); });
+    //Main.Canvas.addEventListener('mouseup', function (mouseEvent) { Main.MouseUp(mouseEvent); });
+    //Main.Canvas.addEventListener('mousedown', function (mouseEvent) { Main.MouseDown(mouseEvent); });
+    Main.Canvas.addEventListener('mouseenter', function (mouseEvent) { Main.MouseUp(mouseEvent); });
+    Main.Canvas.addEventListener('mouseleave', function (mouseEvent) {Main.MouseDown(mouseEvent);});
+
 });
