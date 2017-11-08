@@ -24,7 +24,7 @@ Main.Box = function (xC, yC, c, d, color) {
     this.draw = function () {
 
         //If mouseover
-        if (Main.MX < this.x + 30 && Main.MX > this.x - 30 && Main.MY > 300 && Main.MY < 400) {
+        if (Main.MX < this.x + 50 && Main.MX > this.x - 10 && Main.MY > 300 && Main.MY < 400) {
             Main.Context.fillStyle = "#FF0000";
             Main.Context.fillRect(this.x, this.y, Main.focusHeight, Main.focusWidth);
             this.switch = true;
@@ -34,8 +34,8 @@ Main.Box = function (xC, yC, c, d, color) {
 
                 Main.focusNumber = this.number;
                 this.x = Main.MX;
-                Main.Context.fillRect(Main.MX, this.y, Main.focusHeight, Main.focusWidth);
                 Main.temp = this.x;
+                Main.Context.fillRect(Main.MX, this.y, Main.focusHeight, Main.focusWidth);
 
             }
         }
@@ -46,6 +46,11 @@ Main.Box = function (xC, yC, c, d, color) {
             if (Main.followMe == true) {
 
                 var newLocation = Main.temp + Main.offset;
+                if (newLocation >= 600) {
+
+                    newLocation = newLocation - 600;
+                }
+
                 Main.temp = newLocation;
                 this.x = newLocation;
 
@@ -56,6 +61,7 @@ Main.Box = function (xC, yC, c, d, color) {
             }
 
         }    
+
             this.x += Main.speed;
 
             if (this.x >= 600) {
@@ -113,7 +119,7 @@ Main.checkForPause = function () {
 
     if (total == 5) {
         Main.pause = false;
-        Main.speed = 2;
+        Main.speed = 2
     }
 }
 
@@ -129,7 +135,22 @@ Main.holdBlock = function () {
 }
 
 
+Main.speedUp = function ()
+{
+    if (Main.pause == false) {
 
+        if (Main.MX > 350 && Main.MX < 449) {
+            Main.speed = 3;
+        } else if (Main.MX > 450 && Main.MX < 549) {
+            Main.speed = 4;
+        } else if (Main.MX > 550) {
+            Main.speed = 6;
+
+        }
+
+    }
+
+}
 
 Main.Animate = function()
 {
@@ -137,7 +158,7 @@ Main.Animate = function()
 
     Main.checkForPause();
     Main.holdBlock();
-
+    Main.speedUp();
 
     for (var i = 0; i < Main.Boxes.length; i++)
     {
