@@ -1,0 +1,281 @@
+﻿body {
+    width: 520px;
+    font-family: Calibri;
+    font-size: 12px;
+    background-color: rgba(0, 178, 166, 0.75);
+}
+
+.logIn {
+    display: inline-block;
+    width: 52%;
+}
+
+.logInElements {
+    border-bottom: 1px solid blue;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.contentLogIn {
+    width: 39%;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+.contentCreate {
+    display: inline-block;
+    width: 36%;
+    float: left;
+    padding: 40px 15px 0px 0;
+}
+
+.accountCreation {
+    display: inline-block;
+    width: 59%;
+}
+
+.container {
+    border: 2px solid gray;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: lightgray;
+    box-shadow: 5px 5px black;
+    border-radius: 10px;
+}
+
+.error {
+    display: none;
+    color: red;
+    width: 100% !important;
+}
+
+.button {
+    background-color: lightblue;
+    display: inline-block;
+    border-radius: 10px;
+    float: right;
+    width: 110px;
+    margin-top: 10px;
+}
+
+.header {
+    
+    font-family: "Cambria";
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.legal {
+    
+    font-family: Calibri;
+    font-size: 12px;
+    font-style: italic;
+
+}
+
+.create {
+
+    width: 50%;
+
+}
+
+.label {
+    width: 42%;
+    display: inline-block;
+    padding: 12px 0;
+}
+
+.accountName {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+}
+
+.values {
+    display: inline-block;
+    width: 68%;
+    border-left: 1px solid black;
+    padding-left: 15px;
+}
+
+.information {
+    display: table;
+    border: 1px solid black;
+    width: 75%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.secondView{
+
+    display:none;
+
+}
+
+.content {
+    font-size: 14px;
+
+}
+
+div.logIn > .label {
+
+    padding-right: 14px;
+
+
+}
+
+.createButton {
+    
+    margin-right: 25px;
+
+}
+
+button.button.update{
+
+    width: 25%;
+    float: none;
+    margin: 0;
+
+}
+
+div.accountName > .label {
+    
+    display: block;
+
+}
+
+div.accountName:first-child .name {
+    font-weight: bold;
+}
+
+.value {
+    padding: 12px 0;
+
+}
+
+.elements {
+    border-top: 1px solid blue;
+    width: 90%;
+    padding: 10px;
+    margin: 15px auto;
+}
+
+.element{
+    margin: auto;
+    width: 55%;
+}
+
+.button.addElement {
+    margin: 0;
+    padding: 0;
+
+}
+
+input.account.element {
+    width: 60%;
+
+}
+
+div.element > .label {
+
+    width: 40%;
+
+}
+
+.additionalInfo {
+    
+    display: block;
+    padding:  10px 50px;
+
+}
+
+.mobileTitle {
+    display: none;
+
+}
+
+
+
+@media only screen and (max-width:480px) { /* smartphones, Android phones, landscape iPhone */
+
+    .content {
+        display: none;
+    }
+    body {
+        width: 90%;
+        margin: auto;
+        font-size: 14px;
+    }
+    .logIn, .accountCreation {
+        width: 90%;
+    }
+        .login.username, .login.password, .create.username, input.create {
+            width: 60%;
+        }
+        .label{
+
+            width: 25%;
+        }
+    button.logInButton.button, button.createButton.button, button.button.addElement, button.button.update {
+        width: 100%;
+        float: none;
+        margin: 12px;
+        display: block;
+        padding: 10px;
+
+    }
+    .header, .legal {
+        text-align: center;
+    }
+    .mobileTitle {
+        display:block;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+   .label.add {
+        display: block;
+        width: 100%;
+        margin-left: 25px;
+    }
+    input.account.element {
+        display: block;
+        width: 80%;
+    }
+    .element {
+        width: 100%;
+    }
+    .values{
+        
+        display:block;
+        border: none;
+    
+    }
+    .accountName{
+        display: none;
+
+    }
+
+    .information {
+        border: none;
+    }
+}
+
+
+@media only screen and (max-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+    body {
+
+        width: 300px;
+    }
+    .container {
+        box-shadow: none;
+    }
+
+
+}
+
+
