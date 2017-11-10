@@ -6,5 +6,7 @@
   <socks>true</socks>
   <beard>true</beard>
   <glasses>needed</glasses>
-  <gpa>3.0</gpa>
+  <gpa>2.0</gpa>
+  <height>tall</height>
+  <cat>all</cat>
 </account>

@@ -28,6 +28,7 @@ Home.createAccount = function() {
                 $(".error.create").css("display", "block");
             } else if (response.Message === "Success") {
                 $(".container").css("border", "1px solid green");
+                $(".success.create").show();
             }
         }
 
@@ -61,7 +62,7 @@ Home.logIn = function () {
                 Home.getInformation();
                 $(".firstView").animate({
                     right: '1000px'
-                }, "slow", function () { $(".firstView").hide(); $(".secondView").show().animate({ left: '10px' }); });
+                }, "slow", function (){ $(".firstView").hide(); $(".secondView").show().animate({ left: '5px' }); });
 
             }
         }
@@ -96,6 +97,7 @@ Home.addOrUpdateElement = function () {
             else if (response.Message === "Success") {
                 $(".container").css("border", "1px solid green");
                 $(".additionalInfo").append("<li>Name: " + elementName + "        Value: " + elementValue + "</li>");
+                $(".success.message").fadeIn(1000).fadeOut(1000);
 
             }
         }

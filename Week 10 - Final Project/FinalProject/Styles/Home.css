@@ -60,6 +60,28 @@
     margin-top: 10px;
 }
 
+.success.create {
+    display: none;
+    color: green;
+    width: 70%;
+}
+
+.message {
+    display:none;
+
+}
+
+.success.message {
+    color: green;
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fail.message {
+    color: red;
+}
+
 .header {
     
     font-family: "Cambria";
@@ -268,6 +290,12 @@ div.element > .label {
     .information {
         border: none;
     }
+
+    .firstView, .secondView {
+        
+        width: 85%;
+    
+    }
 }
 
 
@@ -280,6 +308,7 @@ div.element > .label {
     .container {
         box-shadow: none;
     }
+
 
 
 }
