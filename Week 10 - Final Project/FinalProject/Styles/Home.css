@@ -109,10 +109,16 @@
     padding: 0 10px;
 }
 
-.secondView{
+.firstView {
+    position: relative;
+    width: 470px;
+}
 
-    display:none;
-
+.secondView {
+    position: relative;
+    left: 300px;
+    width: 470px;
+    display: none;
 }
 
 .content {

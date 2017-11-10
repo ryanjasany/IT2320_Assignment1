@@ -59,8 +59,9 @@ Home.logIn = function () {
             else if (response.Message === "Success") {
                 $(".container").css("border", "1px solid green");
                 Home.getInformation();
-                $(".secondView").show();
-                $(".firstView").hide();
+                $(".firstView").animate({
+                    right: '1000px'
+                }, "slow", function () { $(".firstView").hide(); $(".secondView").show().animate({ left: '10px' }); });
 
             }
         }
