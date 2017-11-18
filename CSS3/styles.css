@@ -1,0 +1,204 @@
+﻿.square {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin: 20px;
+    background-color: hsla(227, 100%, 50%, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px grey;
+
+}
+
+    .square.one {
+        animation-name: change;
+        animation-duration: 4s;
+    }
+
+    .square.two {
+        position: relative;
+        animation-name: move;
+        animation-duration: 4s;
+        animation-iteration-count: 3;
+    }
+
+    .square.three {
+        position: relative;
+        animation-name: dash;
+        animation-duration: 4s;
+        animation-iteration-count: 3;
+    }
+
+    .square.four, .square.five {
+        position: relative;
+        animation-name: prance;
+        animation-duration: 4s;
+        animation-iteration-count: 5;
+        animation-delay: 2s;
+    }
+
+    .square.six {
+        position: relative;
+        transition: width 2s;
+        transition-timing-function: ease-out;
+    }
+
+.six:hover {
+    width: 300px;
+
+}
+
+.square.zero {
+
+    animation-name: flash;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+.nyan {
+    width: 270px;
+    height: 120px;
+    background-image: url("nyan.gif");
+    position: relative;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-iteration-count: 100;
+    z-index: 10;
+}
+
+.inside {
+    background-image: url("tric.jpeg");
+    background-size: 100px 120px;
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    margin-left: 50px;
+}
+
+.main {
+    width: 100%;
+    height: 600px;
+    background: -webkit-linear-gradient(pink, magenta); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(pink, magenta); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(pink, magenta); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(pink, magenta); /* Standard syntax */
+}
+
+@keyframes change {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    15% {
+        left: 150px;
+        top: 100px;
+    }
+
+    25% {
+        left: 300px;
+        top: 0px;
+    }
+
+    35% {
+        
+        left: 390px;
+        top: 100px;
+    
+    }
+
+    50% {
+        left: 500px;
+        top: 0px;
+    }
+
+    60% {
+        left: 550px;
+        top: 100px;
+    }
+
+    75% {
+        left: 700px;
+        top: 0px;
+    }
+
+    90% {
+        left: 900px;
+        top: 100px;
+    }
+
+    100% {
+        left: 1000px;
+        top: 0px;
+    }
+}
+
+
+@keyframes prance {
+    0% {
+        background-color: red;
+        transform: rotate(20deg);
+    }
+
+    25% {
+        background-color: yellow;
+        transform: rotate(30deg);
+    }
+
+    50% {
+        background-color: blue;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        background-color: green;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        background-color: red;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash {
+    0% {
+        background-color: white;
+        border: 1px solid white;
+        padding: 0px 10px;
+
+    }
+
+    25% {
+        background-color: blue;
+        padding: 0px;
+        border: 1px solid blue;
+    }
+
+    50% {
+        background-color: white;
+        border: 1px solid white;
+        padding: 0px 10px;
+    }
+
+    75% {
+        background-color: blue;
+        padding: 0px;
+        border: 1px solid blue;
+    }
+
+    100% {
+        background-color: white;
+        border: 1px solid white;
+        padding: 0px 10px;
+    }
+}
