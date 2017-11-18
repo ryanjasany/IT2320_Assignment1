@@ -14,20 +14,6 @@
         animation-duration: 4s;
     }
 
-    .square.two {
-        position: relative;
-        animation-name: move;
-        animation-duration: 4s;
-        animation-iteration-count: 3;
-    }
-
-    .square.three {
-        position: relative;
-        animation-name: dash;
-        animation-duration: 4s;
-        animation-iteration-count: 3;
-    }
-
     .square.four, .square.five {
         position: relative;
         animation-name: prance;
