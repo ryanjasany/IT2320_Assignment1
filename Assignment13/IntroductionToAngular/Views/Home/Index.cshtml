@@ -1,0 +1,23 @@
+﻿<html>
+
+    <head>
+        <link href="~/Styles/Home.css" rel="stylesheet" />
+        <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+        <script src="~/Scripts/Home.js"></script>
+        <title>Introduction to AngularJS - Ryan Jasany</title>
+    </head>
+
+    <body>
+
+        <h2>Here is the batting order... !</h2>
+        <div ng-app="my-module" ng-controller="my-root-controller"> 
+
+            <!-- HTML Here -->
+            <h1 ng-repeat="x in players">{{x.FirstName + " " + x.LastName}}</h1>
+
+        </div>
+
+
+    </body>
+
+</html>
