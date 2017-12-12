@@ -2,11 +2,12 @@
 <account>
   <username>ryanjasany</username>
   <password>password1</password>
-  <emailadd>rjasany@hotmail.com</emailadd>
+  <emailadd>rjasany@fastmail.com</emailadd>
   <socks>true</socks>
   <beard>true</beard>
   <glasses>needed</glasses>
-  <gpa>2.0</gpa>
+  <gpa>4.0</gpa>
   <height>tall</height>
   <cat>all</cat>
+  <Podcast>Dear Hank and John</Podcast>
 </account>
